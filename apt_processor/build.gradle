@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":apt_api")
+    //自动生成代码
+    api 'com.google.auto.service:auto-service:1.0-rc3'
+    api 'com.squareup:javapoet:1.11.1'
+
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+
